@@ -42,7 +42,7 @@ public class SetUp {
 				
 		for(int i = 0 ; i< numeroHilos; i++){
 			try{
-				new Descargador(args[0],numeroHilos-1, i).start();
+				new Descargador(args[0]).start();
 			}catch(Exception e){
 				System.err.println("Error al crear el hilo: "+i);
 			}
@@ -69,7 +69,7 @@ public class SetUp {
 	public static class Descargador extends Thread{ 
 		int numImgDescargadas;
 		boolean pararHilo;
-		public Descargador(String pathArchivoUrls, int zancada, int offset)throws Exception{
+		public Descargador(String pathArchivoUrls)throws Exception{
 			pararHilo = false;
 		}
 

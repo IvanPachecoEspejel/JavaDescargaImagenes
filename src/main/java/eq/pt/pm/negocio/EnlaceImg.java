@@ -16,7 +16,7 @@ public class EnlaceImg {
 	public String extension;
 	public String nombre;
 	
-	public static boolean REEMPLAZAR_IMGS_EXISTENTES; //true: Reemplaza, False: Imgnora
+	public static boolean REEMPLAZAR_IMGS_EXISTENTES; //true: Reemplaza, False: Ignora
 	
 	public EnlaceImg(String url) throws Exception{
 		try{
