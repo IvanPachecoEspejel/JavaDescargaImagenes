@@ -22,17 +22,28 @@ public class EnlaceImg {
 		try{
 			
 			this.urlImg = url.trim();
-			//System.out.println("Url : "+this.urlImg);
 			
 			this.nombre = this.urlImg.substring(this.urlImg.lastIndexOf('/')+1, 
 					this.urlImg.lastIndexOf("."));
-			//System.out.println("Nombre: "+this.nombre);
 			
 			this.extension = this.urlImg.substring(this.urlImg.lastIndexOf(".")+1);
-			//System.out.println("Extension: "+this.extension);
 		}catch(Exception e){
 			System.err.println("Error al cargar la url: "+this.urlImg+" no es una direccion de imagen valida ");
-			//e.printStackTrace();
+			throw e;
+		}
+		
+	}
+	
+	public EnlaceImg(String url, String nombre) throws Exception{
+		try{
+			
+			this.urlImg = url.trim();
+			
+			this.nombre = nombre;
+			
+			this.extension = this.urlImg.substring(this.urlImg.lastIndexOf(".")+1);
+		}catch(Exception e){
+			System.err.println("Error al cargar la url: "+this.urlImg+" no es una direccion de imagen valida ");
 			throw e;
 		}
 		
