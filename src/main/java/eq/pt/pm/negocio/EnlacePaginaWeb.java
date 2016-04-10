@@ -46,15 +46,5 @@ public class EnlacePaginaWeb {
 		}
 		return urls;
 	}
-	
-	public static void main(String args[]){
-		List<String> urls = getUrlImagesFromGoogleImagePage("/home/ivan/Escritorio/WebPage.html");
-		for(String url: urls){
-			System.out.println(url);
-		}
-		
-		System.out.println("FIN: "+urls.size());
-		
-	}
 
 }
